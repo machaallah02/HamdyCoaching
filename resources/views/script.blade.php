@@ -32,4 +32,5 @@
 document.querySelector(".scroll-to-top .btn").addEventListener("click", function() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
 </script>

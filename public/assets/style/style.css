@@ -1,6 +1,7 @@
 /* Réinitialisation des marges et des paddings pour une meilleure mise en page */
 
 
+
   ul {
     list-style: none;
     display: flex;
@@ -98,5 +99,26 @@ opacity: 0.8;
   .custom-card .card-body {
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+}
+
+.scrolling-images {
+    display: flex;
+    width: 200%;
+    animation: scroll 20s linear infinite;
+}
+
+.image {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
 
 
