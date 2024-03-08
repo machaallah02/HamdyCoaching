@@ -17,6 +17,8 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/',[homeController::class, 'home'])
 ->name('app_home');
+Route::get('/blog',[homeController::class, 'blog'])
+->name('app_blog');
 Route::get('/about',[homeController::class, 'about'])
 ->name('app_about');
 Route::match(['get', 'post'], '/dashboard', [homeController::class, 'dashboard'])
@@ -25,7 +27,7 @@ Route::get('/contact',[homeController::class, 'contact'])
 ->name('app_contact');
 Route::get('/coaching',[homeController::class, 'coaching'])
 ->name('app_coaching');
-Route::get('/coaching1',[homeController::class, 'coaching1'])
-->name('coaching_orientation');
-Route::get('/coaching2',[homeController::class, 'coaching2'])
+Route::get('/coaching-equipe',[homeController::class, 'coaching1'])
+->name('coaching_equipe');
+Route::get('/coaching-pro',[homeController::class, 'coaching2'])
 ->name('coaching_professionnel');

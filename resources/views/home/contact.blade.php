@@ -1,56 +1,17 @@
 @extends('base')
-@section('title','contact')
+@section('title', 'contact')
 @section('content')
 
-<body>
-    <div class="container mt-5">
-      <h1 class="mb-4">Contactez-nous</h1>
-      <form>
-        <div class="mb-3">
-          <label for="nom" class="form-label">Nom</label>
-          <input type="text" class="form-control" id="nom" placeholder="Votre nom">
+    <div class="container-fluid relative h-96 overflow-hidden">
+        <div class="absolute inset-0"
+            style="background-image: url('assets/img/ca11.png'); background-size: cover; background-position: center;">
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="votre.email@example.com">
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+            <h1 class="text-white text-6xl font-bold">Contact</h1>
+            <a href="#">
+                <button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3">Prendre un rendez-vous</button>
+            </a>
         </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" rows="4" placeholder="Écrivez votre message ici"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-      </form>
-      <div class="card">
-        <div class="card-body">
-          This is some text within a card body.
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          This is some text within a card body.
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          This is some text within a card body.
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          This is some text within a card body.
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          This is some text within a card body. ughjk
-        </div>
-      </div>
     </div>
 
-
-    <!-- Inclure les fichiers JS de Bootstrap (optionnel, mais requis pour certains composants) -->
-
-  </body>
 @endsection
-
-

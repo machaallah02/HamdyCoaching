@@ -10,16 +10,14 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/@heroicons/react@1.0.5/dist/index.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="{{ asset('assets/lib/bootstrap/app.css')}}">
         <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/bootstrap.css')}}">
         <link href="assets/lib/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{{asset('assets/lib/bootstrap/css/bootstrap.min.css')}}}">
-        <link rel="stylesheet" href="./css/bootstrap.css">
         <link rel="stylesheet" href="./assets/style/style.css">
         <!-- Styles -->
-      
     </head>
     <body>
         @include('navbar/navbar')
@@ -27,12 +25,10 @@
         <div class="scroll-to-top">
             <a href="#top" class="btn btn-primary"><i class="fa fa-arrow-up"></i></a>
           </div>
-        @include('script')
-    </body>
-
-<footer class="bg-dark text-center text-white">
-
-    <div class="container p-4">
+    @include('home.equipe1')
+    @include('home.contact1')
+    <footer class="bg-dark text-center text-white">
+    <div class="container-fluid p-4">
       <section class="mb-4">
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-facebook"></i></a>
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-twitter"></i></a>
@@ -54,5 +50,6 @@
     </div>
 
   </footer>
-
+  @include('script')
+</body>
 </html>

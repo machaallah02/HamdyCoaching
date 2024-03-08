@@ -3,48 +3,64 @@
 
 @section('content')
 
-    <div class="container-fluid relative h-96 overflow-hidden">
+    {{-- <div class="container-fluid relative h-96 overflow-hidden">
         <div class="absolute inset-0 scrolling-images">
-            <div class="image" style="background-image: url('assets/img/ca5.png');"></div>
-            <div class="image" style="background-image: url('assets/img/ca3.png');"></div>
-            <div class="image" style="background-image: url('assets/img/ca11.png');"></div>
+            <div class="image" style="background-image: url('assets/img/ca5.png')"></div>
+            <div class="image" style="background-image: url('assets/img/ca3.png')"></div>
+            <div class="image" style="background-image: url('assets/img/ca11.png')"></div>
         </div>
         <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
-            <h1 class="text-black bg-gray-200 text-4xl font-bold p-4 rounded">VOTRE COACH PROFESSIONNEL</h1>
+            <h1 class="text-white  text-6xl font-bold">Développer votre <br> entreprise,<br> dépasser vos limites</h1>
             <a href="{{ route('app_contact') }}"><button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3">Prendre un rendez-vous</button></a>
         </div>
-    </div>
+    </div> --}}
+    <div class="container-fluid">
+        <div id="carousel" class="relative overflow-hidden h-96">
+            <div id="slides" class="hidden w-full flex ">
+                <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full"
+                style="background-image: url('assets/img/ca11.png'); background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+                        <h1 class="text-white text-6xl font-bold text-center">Développer votre <br> entreprise,<br> dépasser
+                            vos
+                            limites</h1>
+                        <a href="{{ route('app_contact') }}"><button
+                                class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
+                                rendez-vous</button></a>
+                    </div>
+                </div>
+                <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full"
+                    style="background-image: url('assets/img/ca11.png');background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+                        <h1 class="text-white text-6xl font-bold text-center">Atteindre <br> ses objectifs</h1>
+                        <a href="{{ route('app_contact') }}"><button
+                                class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
+                                rendez-vous</button></a>
+                    </div>
 
-    <div class="container-fluid mx-auto mt-8 mb-2">
-        <h2 class="text-2xl font-bold text-gray-800 mb-2 text-center">KIDE-MOKAFOU Hamdy</h2>
-                <p class="text-lg text-gray-600 mb-4  text-center">Moi</p>
-        <div class="flex flex-col md:flex-row items-center justify-center bg-white shadow-lg rounded-lg p-6">
-            <div class="w-1/4 mr-6">
-                <img src="assets/img/ca4.png" alt="Portrait du Coach" class="w-full h-auto rounded-lg object-cover">
-                <p class="text-gray-500 text-center italic font-serif ">Hamdy, coach professionnel diplômé</p>
+
+                </div>
+                <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full"
+                    style="background-image: url('assets/img/ca3.png');background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+                        <h1 class="text-white text-6xl font-bold text-center">Développer vos <br> compétences en
+                            entreprenariat
+                        </h1>
+                        <a href="{{ route('app_contact') }}"><button
+                                class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
+                                rendez-vous</button></a>
+                    </div>
+
+                </div>
+
             </div>
-            <div class="w-3/4 text-center md:text-left">
-                <div class="bg-gray-200 rounded-xl shadow-md p-6 mb-2">
-                    <p class="text-blue-400 mb-4 font-bold">Coach professionnel à Lomé et à distance en visio, je vous propose une approche du coaching bienveillante qui ouvre le chemin du changement. Riche de 10 ans d’expérience comme interprète et manager dans les médias, j’aime accompagner la personne dans son développement et son repositionnement professionnel ou personnel.</p>
-                </div>
-                <div class="bg-gray-200 rounded-xl shadow-md p-6 mb-2">
-                    <p class="text-gray-700 mb-4">Je crois fermement en la capacité de chaque individu à exprimer pleinement sa vitalité, à reprendre les rênes de sa vie et à ressentir un bien-être accru, sans être entravé par son environnement ou ses obstacles internes tels que la peur, la routine, les croyances limitantes ou les expériences traumatisantes.</p>
-                </div>
-                <div class="bg-gray-200 rounded-xl shadow-md p-6 mb-2">
-                    <p class="text-gray-700 mb-4">Grâce à une formation approfondie dans des techniques d'accompagnement puissantes, je me suis spécialisé dans le développement de la confiance en soi, une composante essentielle du bien-être humain. Plus précisément, mon travail vise à aider mes clients à renforcer leur confiance en eux-mêmes, à améliorer leur estime personnelle, à mieux gérer leurs émotions et le stress, à perfectionner leurs compétences en communication et en affirmation de soi, ainsi qu'à surmonter les blessures du passé pour avancer sur le chemin de la résilience. Ces domaines sont souvent ceux où les premiers résultats du coaching peuvent se manifester rapidement.</p>
-                </div>
-                <div class="bg-gray-200 rounded-xl shadow-md p-6 mb-2">
-                    <p class="text-red-500 mb-4 font-bold">Que ce soit en ligne via des Meets ou en présentiel à Lomé, je suis là pour accompagner mes clients dans les objectifs suivants :</p>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>Surmonter une situation complexe ou bloquée</li>
-                        <li>Accélérer le processus de changement pour trouver leur juste place dans la vie</li>
-                        <li>Donner vie à leurs aspirations et concrétiser leurs désirs</li>
-                        <li>Cultiver un bien-être intérieur plus profond</li>
-                        <li>Retrouver du sens et se reconnecter avec leurs valeurs fondamentales</li>
-                        <li>En résumé, les aider à s'épanouir pleinement dans tous les aspects de leur vie.</li>
-                    </ul>
-                </div>
-                <p class="text-gray-700 mb-4">Besoin d'aide ou de conseils ? N'hésitez pas à me contacter !</p>
+            <div id="controls"
+                class="absolute top-0 left-0 right-0 flex justify-between px-4 py-2 mt-2 z-20  bg-opacity-50">
+                <button id="prevBtn"
+                    class="text-white font-bold text-4xl absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-0 p-4">prev</button>
+                <button id="nextBtn"
+                    class="text-white font-bold text-4xl absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-0 p-4">next</button>
             </div>
         </div>
     </div>
@@ -53,16 +69,18 @@
 
 
     <div class="container-fluid mx-auto px-4 py-8 bg-gray-300">
-        <h1 class="text-4xl font-bold mb-4 text-center">Vous aspirez à plus de plaisir, de sens et de liberté dans votre vie professionnelle ?</h1>
-        <p class="mb-4 text-center p-4">Aujourd'hui, il est temps de prendre votre vie en main et de concrétiser vos projets professionnels pour vous réaliser pleinement.</p>
+        <h1 class="text-4xl font-bold mb-4 text-center">Vous aspirez à plus de plaisir, de sens et de liberté dans votre vie
+            professionnelle ?</h1>
+        <p class="mb-4 text-center p-4">Aujourd'hui, il est temps de prendre votre vie en main et de concrétiser vos projets
+            professionnels pour vous réaliser pleinement.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-gray-200 rounded-full shadow-md p-6">
+            <div class="bg-gray-200 hover:bg-gray-400 rounded-full shadow-md p-6">
                 <h2 class="text-xl text-center font-bold mb-2">CONFÉRENCES</h2>
             </div>
-            <div class="bg-gray-200 rounded-full shadow-md p-6">
+            <div class="bg-gray-200 hover:bg-gray-400 rounded-full shadow-md p-6">
                 <h2 class="text-xl text-center font-bold mb-2">MASTERCLASS</h2>
             </div>
-            <div class="bg-gray-200 rounded-full shadow-md p-6">
+            <div class="bg-gray-200 hover:bg-gray-400 rounded-full shadow-md p-6">
                 <h2 class="text-xl text-center font-bold mb-2">FORMATION EN LIGNE</h2>
             </div>
         </div>
@@ -71,7 +89,9 @@
         <img src="assets/img/co6.png" alt="Description de l'image" class="w-1/3 mr-2 h-full">
         <div>
             <p class="text-xl mb-4 text-center">En quelques mots...</p>
-            <p class="text-gray-700">J'accompagne essentiellement des particuliers qui me contactent pour résoudre une situation professionnelle ou personnelle. Mais j'interviens aussi en entreprise pour accompagner les cadres, managers et dirigeants.</p>
+            <p class="text-gray-700">J'accompagne essentiellement des particuliers qui me contactent pour résoudre une
+                situation professionnelle ou personnelle. Mais j'interviens aussi en entreprise pour accompagner les cadres,
+                managers et dirigeants.</p>
             <p class="text-xl mb-4 mt-8 font-bold text-center">Qui je coache ?</p>
             <ul class="list-disc list-inside text-gray-700">
                 <li>Les femmes et les hommes.</li>
@@ -82,16 +102,11 @@
             <p class="text-xl mb-4 mt-8 font-bold text-center">Quel coaching pour passer de l'intention à l'action ?</p>
         </div>
     </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card mx-auto mb-2">
-                    <div class="card-body text-center">
-                        <p>Pour passer à un autre.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="bg-gray-100 p-6 rounded-md shadow-md">
+        <h2 class="text-xl font-bold mb-4">Comment décrocher un marché de haut de gamme ?</h2>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.</p>
     </div>
     @include('home.content1')
     @include('home.temoignage')
