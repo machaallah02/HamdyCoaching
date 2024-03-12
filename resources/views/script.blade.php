@@ -59,57 +59,93 @@
     });
 </script>
 
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.getElementById('slides');
-    const slideWidth = slides.children[0].clientWidth; // Largeur de la fenêtre
-    const intervalDuration = 3000; // Durée de chaque diapositive en millisecondes
-    let currentSlide = 0;
+        const slides = document.getElementById('slides');
+        const slideWidth = window.innerWidth; // Largeur de chaque slide
+        let currentSlide = 0;
+        let slideInterval;
 
-    function nextSlide() {
-        currentSlide++;
-        if (currentSlide >= slides.children.length) {
-            currentSlide = 0;
+
+        // Intervalle de changement de diapositive en millisecondes (par exemple, 3000 pour 3 secondes)
+        const intervalDuration = 5000; // Changer cette valeur selon vos besoins
+
+        function startSlideInterval() {
+            slideInterval = setInterval(nextSlide, intervalDuration);
         }
-        updateCarousel();
-    }
 
-    function prevSlide() {
-        currentSlide--;
-        if (currentSlide < 0) {
-            currentSlide = slides.children.length - 1;
+        function stopSlideInterval() {
+            clearInterval(slideInterval);
         }
-        updateCarousel();
-    }
 
-    function updateCarousel() {
-        slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-    }
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.children.length ) {
+                currentSlide = 0;
+            }
+            updateCarousel();
+        }
 
-    setInterval(nextSlide, intervalDuration); // Change de diapositive toutes les 4 secondes
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide = 0) {
+                currentSlide = slides.children.length - 1;
+            }
+            updateCarousel();
+        }
 
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+        function updateCarousel() {
+    // Empêcher le débordement horizontal
+    document.body.style.overflowX = 'hidden';
 
-    prevBtn.addEventListener('click', prevSlide);
-    nextBtn.addEventListener('click', nextSlide);
+    // Déplacer le conteneur des diapositives pour afficher la diapositive actuelle avec une transition
+    slides.style.transition = 'transform 1s ease-in-out';
+    slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+}
+
+        // Ajuster la largeur du conteneur de slides en fonction du nombre total de slides
+        slides.style.width = `${slideWidth * slides.children.length}px`;
+
+        startSlideInterval();
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        prevBtn.addEventListener('click', function() {
+            stopSlideInterval();
+            prevSlide();
+            startSlideInterval();
+        });
+
+        nextBtn.addEventListener('click', function() {
+            stopSlideInterval();
+            nextSlide();
+            startSlideInterval();
+        });
     });
 </script>
+
+
+
+
+
+
+
 <script>
     function toggleDescription() {
-    var description = document.querySelector('.article-description');
-    var fullDescription = document.querySelector('.article-full-description');
-    var buttonText = document.querySelector('button');
+        var description = document.querySelector('.article-description');
+        var fullDescription = document.querySelector('.article-full-description');
+        var buttonText = document.querySelector('button');
 
-    if (description.classList.contains('truncate')) {
-        description.classList.remove('truncate');
-        buttonText.textContent = "Lire moins";
-    } else {
-        description.classList.add('truncate');
-        buttonText.textContent = "Lire plus";
+        if (description.classList.contains('truncate')) {
+            description.classList.remove('truncate');
+            buttonText.textContent = "Lire moins";
+        } else {
+            description.classList.add('truncate');
+            buttonText.textContent = "Lire plus";
+        }
+
+        fullDescription.classList.toggle('hidden');
     }
-
-    fullDescription.classList.toggle('hidden');
-}
 </script>
-

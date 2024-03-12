@@ -14,59 +14,61 @@
             <a href="{{ route('app_contact') }}"><button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3">Prendre un rendez-vous</button></a>
         </div>
     </div> --}}
-    <div class="container-fluid">
-        <div id="carousel" class="relative overflow-hidden h-96">
-            <div id="slides" class="hidden w-full flex ">
-                <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full"
-                style="background-image: url('assets/img/ca11.png'); background-size: cover; background-position: center;">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
-                        <h1 class="text-white text-6xl font-bold text-center">Développer votre <br> entreprise,<br> dépasser
-                            vos
-                            limites</h1>
-                        <a href="{{ route('app_contact') }}"><button
-                                class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
-                                rendez-vous</button></a>
-                    </div>
+
+
+    <div class="relative w-full overflow-x-hidden h-full ">
+        <div id="slides" class="flex w-full h-full">
+            <!-- Première diapositive -->
+            <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full h-96 md:h-screen"
+                style="background-image: url('/assets/img/ca5.png')">
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+                    <h1 class="text-white text-6xl font-bold text-center">Développer votre <br> entreprise,<br> dépasser
+                        vos
+                        limites</h1>
+                    <a href="{{ route('app_contact') }}">
+                        <button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
+                            rendez-vous</button>
+                    </a>
                 </div>
-                <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full"
-                    style="background-image: url('assets/img/ca11.png');background-size: cover; background-position: center;">
-                    <div class="absolute inset-0 bg-black opacity-50"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
-                        <h1 class="text-white text-6xl font-bold text-center">Atteindre <br> ses objectifs</h1>
-                        <a href="{{ route('app_contact') }}"><button
-                                class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
-                                rendez-vous</button></a>
-                    </div>
-
-
-                </div>
-                <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full"
-                    style="background-image: url('assets/img/ca3.png');background-size: cover; background-position: center;">
-                    <div class="absolute inset-0 bg-black opacity-50"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
-                        <h1 class="text-white text-6xl font-bold text-center">Développer vos <br> compétences en
-                            entreprenariat
-                        </h1>
-                        <a href="{{ route('app_contact') }}"><button
-                                class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
-                                rendez-vous</button></a>
-                    </div>
-
-                </div>
-
             </div>
-            <div id="controls"
-                class="absolute top-0 left-0 right-0 flex justify-between px-4 py-2 mt-2 z-20  bg-opacity-50">
-                <button id="prevBtn"
-                    class="text-white font-bold text-4xl absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-0 p-4">prev</button>
-                <button id="nextBtn"
-                    class="text-white font-bold text-4xl absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-0 p-4">next</button>
+            <!-- Deuxième diapositive -->
+            <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full h-96 md:h-screen"
+                style="background-image: url('/assets/img/ca11.png')">
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+                    <h1 class="text-white text-6xl font-bold text-center">Atteindre <br> ses objectifs</h1>
+                    <a href="{{ route('app_contact') }}">
+                        <button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
+                            rendez-vous</button>
+                    </a>
+                </div>
+            </div>
+            <!-- Troisième diapositive -->
+            <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full h-96 md:h-screen"
+                style="background-image: url('/assets/img/ca3.png')">
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+                    <h1 class="text-white text-6xl font-bold text-center">Développer vos <br> compétences en entreprenariat
+                    </h1>
+                    <a href="{{ route('app_contact') }}">
+                        <button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
+                            rendez-vous</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Contrôles du carrousel -->
+        <div id="controls" class="static top-0 left-0 right-0 flex justify-between  z-20 bg-opacity-50">
+            <button id="prevBtn" class="text-white font-bold text-4xl absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-0 p-2 border border-white rounded-full ml-2 hover:scale-105"> < </button>
+            <button id="nextBtn" class="text-white font-bold text-4xl absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-0 p-2 border border-white rounded-full mr-2 hover:scale-105"> > </button>
+        </div>
+        <!-- Points de référence -->
+        <div class="absolute bottom-2 left-0 right-0 flex justify-center items-center pb-4 z-20">
+            <div class="flex space-x-2">
+                <button class="h-3 w-3 rounded-full bg-white opacity-50"></button>
+                <button class="h-3 w-3 rounded-full bg-white opacity-50"></button>
+                <button class="h-3 w-3 rounded-full bg-white opacity-50"></button>
             </div>
         </div>
     </div>
-
-
-
 
     <div class="container-fluid mx-auto px-4 py-8 bg-gray-300">
         <h1 class="text-4xl font-bold mb-4 text-center">Vous aspirez à plus de plaisir, de sens et de liberté dans votre vie

@@ -25,8 +25,6 @@
         <div class="scroll-to-top">
             <a href="#top" class="btn btn-primary"><i class="fa fa-arrow-up"></i></a>
           </div>
-    @include('home.equipe1')
-    @include('home.contact1')
     <footer class="bg-dark text-center text-white">
     <div class="container-fluid p-4">
       <section class="mb-4">
@@ -46,7 +44,7 @@
       </section>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      <a class="text-white" href="https://mdbootstrap.com/">Machcode.com</a>
     </div>
 
   </footer>
