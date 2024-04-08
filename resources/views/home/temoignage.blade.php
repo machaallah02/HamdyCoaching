@@ -115,7 +115,8 @@
         </div>
     </div>
     <div class=" flex flex-clos items-center justify-center">
-        <a href="#"><button class="rounded-full bg-blue-500 hover:bg-blue-700 font-bold text-white m-2 p-3 text">Voir plus de
+        <a href="#"><button
+                class="rounded-full bg-indigo-600 hover:bg-blue-700 font-bold text-white m-2 p-3 text">Voir plus de
                 témoignages</button></a>
     </div>
 

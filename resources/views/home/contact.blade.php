@@ -4,7 +4,7 @@
 
 <div class="relative w-full h-screen overflow-hidden flex items-center justify-center">
     <div class="absolute inset-0" style="background-image: url('assets/img/ca11.png'); background-size: cover; background-position: center;"></div>
-    <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 bg-opacity-50">
+    <div class="absolute inset-0 flex flex-col items-center justify-center bg-indigo-400 bg-opacity-50">
         <h3 class="text-white p-4 mt-4">Bonjour</h3>
         <h1 class="text-white text-6xl font-bold p-6">Contact<strong class="text-6xl text-blue-500">.</strong></h1>
         <p class="text-white text-center">Contactez-nous pour plus de renseignements sur le coaching pour le business/Dirigeant d'équipe et nos <br> programmes.</p>

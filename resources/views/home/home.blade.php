@@ -2,54 +2,40 @@
 @section('title', 'home')
 
 @section('content')
-
-    {{-- <div class="container-fluid relative h-96 overflow-hidden">
-        <div class="absolute inset-0 scrolling-images">
-            <div class="image" style="background-image: url('assets/img/ca5.png')"></div>
-            <div class="image" style="background-image: url('assets/img/ca3.png')"></div>
-            <div class="image" style="background-image: url('assets/img/ca11.png')"></div>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
-            <h1 class="text-white  text-6xl font-bold">Développer votre <br> entreprise,<br> dépasser vos limites</h1>
-            <a href="{{ route('app_contact') }}"><button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3">Prendre un rendez-vous</button></a>
-        </div>
-    </div> --}}
-
-
-    <div class="relative w-full overflow-x-hidden h-full ">
+    <div class="relative w-full overflow-x-hidden h-full">
         <div id="slides" class="flex w-full h-full">
             <!-- Première diapositive -->
-            <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full h-96 md:h-screen"
+            <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full h-96 h-screen"
                 style="background-image: url('/assets/img/ca5.png')">
-                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-indigo-400 bg-opacity-50">
                     <h1 class="text-white text-6xl font-bold text-center">Développer votre <br> entreprise,<br> dépasser
                         vos
                         limites</h1>
                     <a href="{{ route('app_contact') }}">
-                        <button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
+                        <button class="rounded-full bg-indigo-600 font-bold text-white m-2 p-3 text-xl">Prendre un
                             rendez-vous</button>
                     </a>
                 </div>
             </div>
             <!-- Deuxième diapositive -->
-            <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full h-96 md:h-screen"
+            <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full h-96 h-screen"
                 style="background-image: url('/assets/img/ca11.png')">
-                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-indigo-400 bg-opacity-50">
                     <h1 class="text-white text-6xl font-bold text-center">Atteindre <br> ses objectifs</h1>
                     <a href="{{ route('app_contact') }}">
-                        <button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
+                        <button class="rounded-full bg-indigo-600 font-bold text-white m-2 p-3 text-xl">Prendre un
                             rendez-vous</button>
                     </a>
                 </div>
             </div>
             <!-- Troisième diapositive -->
-            <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full h-96 md:h-screen"
+            <div class="slide relative bg-cover bg-center flex items-center justify-center text-white text-4xl w-full h-96 h-screen"
                 style="background-image: url('/assets/img/ca3.png')">
-                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-indigo-400 bg-opacity-50">
                     <h1 class="text-white text-6xl font-bold text-center">Développer vos <br> compétences en entreprenariat
                     </h1>
                     <a href="{{ route('app_contact') }}">
-                        <button class="rounded-full bg-blue-500 font-bold text-white m-2 p-3 text-xl">Prendre un
+                        <button class="rounded-full bg-indigo-600 font-bold text-white m-2 p-3 text-xl">Prendre un
                             rendez-vous</button>
                     </a>
                 </div>
@@ -57,20 +43,33 @@
         </div>
         <!-- Contrôles du carrousel -->
         <div id="controls" class="static top-0 left-0 right-0 flex justify-between  z-20 bg-opacity-50">
-            <button id="prevBtn" class="text-white font-bold text-4xl absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-0 p-2 border border-white rounded-full ml-2 hover:scale-105"> < </button>
-            <button id="nextBtn" class="text-white font-bold text-4xl absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-0 p-2 border border-white rounded-full mr-2 hover:scale-105"> > </button>
-        </div>
-        <!-- Points de référence -->
-        <div class="absolute bottom-2 left-0 right-0 flex justify-center items-center pb-4 z-20">
-            <div class="flex space-x-2">
-                <button class="h-3 w-3 rounded-full bg-white opacity-50"></button>
-                <button class="h-3 w-3 rounded-full bg-white opacity-50"></button>
-                <button class="h-3 w-3 rounded-full bg-white opacity-50"></button>
-            </div>
+            <button
+                id="prevBtn"class="text-white font-bold text-4xl absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-0 p-2 border border-white rounded-full ml-2 hover:scale-105">
+                < </button>
+                    <button
+                        id="nextBtn"class="text-white font-bold text-4xl absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-0 p-2 border border-white rounded-full mr-2 hover:scale-105">></button>
         </div>
     </div>
+        <div
+            class="mach-ch container bg-indigo-600 ">
+            <div class="flex justify-between p-4">
+                <div class="w-1/2">
+                    <h5 class="text-white font-bold text-sm ">QUI EST HAMDY?</h5>
+                    <strong class="text-white text-4xl">Une vision <br> une mission <br> des engagements.</strong>
+                </div>
+                <div class="w-1/2">
+                    <p class="text-white text-center">Le souhait de HamdyCoaching est de faire de l'entreprise un lieu de
+                        bien-être
+                        humain, source de performance économique.
+                        En combinant l'expérience de nos coachs avec les systèmes développés par ActionCOACH, notre objectif
+                        principal
+                        est d'aider chaque entrepreneur(e) qui souhaite développer et structurer son entreprise pour qu'elle
+                        soit rentable et fonctionne à terme sans lui (elle).</p>
+                </div>
 
-    <div class="container-fluid mx-auto px-4 py-8 bg-gray-300">
+            </div>
+        </div>
+    <div class="container-fluid px-4 py-8 bg-white mt-12">
         <h1 class="text-4xl font-bold mb-4 text-center">Vous aspirez à plus de plaisir, de sens et de liberté dans votre vie
             professionnelle ?</h1>
         <p class="mb-4 text-center p-4">Aujourd'hui, il est temps de prendre votre vie en main et de concrétiser vos projets

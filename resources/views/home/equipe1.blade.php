@@ -2,7 +2,7 @@
     <div class="w-1/2 bg-gray-200 flex items-center justify-center">
         <div class="text-center">
             <h1 class="text-4xl font-bold text-gray-800">Prêts à relever vos défis RH grâce au coaching Hamdy?</h1>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ">
+            <button class="bg-indigo-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ">
                 Demander une démo
             </button>
         </div>
@@ -21,7 +21,7 @@
         <div class="bg-gray-200 flex-grow flex items-center justify-center">
             <div class="text-center">
                 <h1 class="text-4xl font-bold text-gray-800 p-4">Notre méthodologie</h1>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4">En savoir
+                <button class="bg-indigo-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4">En savoir
                     plus</button>
             </div>
         </div>
@@ -39,8 +39,11 @@
         <div class="bg-gray-200 flex-grow">
             <div class="text-center">
                 <h1 class="text-4xl font-bold text-gray-800 p-4">Notre équipe</h1>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4">En savoir
-                    plus</button>
+                <a href="{{ route('app_about') }}">
+                    <button class="bg-indigo-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4">
+                        En savoir plus
+                    </button>
+                </a>
             </div>
         </div>
     </div>

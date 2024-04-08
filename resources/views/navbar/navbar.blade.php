@@ -17,7 +17,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link @if (Request::route()->getName() == 'app_home') active @endif" aria-current="page"
-                        href="{{ route('app_home') }}">Home</a>
+                        href="{{ route('app_home') }}">Acceuil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link @if (Request::route()->getName() == 'app_blog') active @endif" aria-current="page"
@@ -25,11 +25,11 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link @if (Request::route()->getName() == 'app_about') active @endif" aria-current="page"
-                        href="{{ route('app_about') }}">About</a>
+                        href="{{ route('app_about') }}">A propos de nous</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link @if (Request::route()->getName() == 'app_contact') active @endif" aria-current="page"
-                        href="{{ route('app_contact') }}">contact</a>
+                        href="{{ route('app_contact') }}">Contact</a>
                 </li>
             </ul>
         </div>
