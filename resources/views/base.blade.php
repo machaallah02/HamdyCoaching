@@ -24,22 +24,22 @@
         @yield('content')
         <div class="scroll-to-top">
             <a href="#top" class="btn btn-primary"><i class="fa fa-arrow-up"></i></a>
-          </div>
-    <footer class="bg-dark text-center text-white">
+        </div>
+    <footer class="bg-indigo-700 text-center text-white">
     <div class="container-fluid p-4">
-      <section class="mb-4">
+    <section class="mb-4">
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-facebook"></i></a>
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-twitter"></i></a>
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-google"></i></a>
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-instagram"></i></a>
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-linkedin"></i></a>
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-github"></i></a>
-      </section>
-      <section class="mb-4">
+    </section>
+    <section class="mb-4">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat namoptio pariatur est quia magnam
-          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat namoptio pariatur est quia magnam
+        eum harum corrupti dicta, aliquam sequi voluptate quas.
         </p>
       </section>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">

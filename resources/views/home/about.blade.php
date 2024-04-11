@@ -13,7 +13,6 @@
         </div>
     </div>
 
-
     <div class="container-fluid mx-auto mt-8 mb-2">
         <h2 class="text-2xl font-bold text-gray-800 mb-2 text-center">KIDE-MOKAFOU Hamdy</h2>
         <p class="text-lg text-gray-600 mb-4  text-center">Moi</p>
@@ -60,5 +59,6 @@
             </div>
         </div>
     </div>
+    @include('home.equipe1')
     @include('home.coach')
 @endsection

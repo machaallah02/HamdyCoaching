@@ -81,7 +81,7 @@
 
         function nextSlide() {
             currentSlide++;
-            if (currentSlide >= slides.children.length ) {
+            if (currentSlide >= slides.children.length) {
                 currentSlide = 0;
             }
             updateCarousel();
@@ -89,20 +89,20 @@
 
         function prevSlide() {
             currentSlide--;
-            if (currentSlide = 0) {
+            if (currentSlide === -1) {
                 currentSlide = slides.children.length - 1;
             }
             updateCarousel();
         }
 
         function updateCarousel() {
-    // Empêcher le débordement horizontal
-    document.body.style.overflowX = 'hidden';
+            // Empêcher le débordement horizontal
+            document.body.style.overflowX = 'hidden';
 
-    // Déplacer le conteneur des diapositives pour afficher la diapositive actuelle avec une transition
-    slides.style.transition = 'transform 1s ease-in-out';
-    slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-}
+            // Déplacer le conteneur des diapositives pour afficher la diapositive actuelle avec une transition
+            slides.style.transition = 'transform 1s ease-in-out';
+            slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
 
         // Ajuster la largeur du conteneur de slides en fonction du nombre total de slides
         slides.style.width = `${slideWidth * slides.children.length}px`;
@@ -149,3 +149,79 @@
         fullDescription.classList.toggle('hidden');
     }
 </script>
+
+<script>
+    const ratio = .1
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: ratio
+    };
+    const handleIntersect = function(entries, observer) {
+        // entries.forEach((entry)=>{
+        //     console.log(entry.intersectionRatio)
+        // })
+        entries.forEach(function(entry) {
+            if (entry.intersectionRatio > ratio) {
+                entry.target.classList.add('reveal-visible')
+                observer.unobserve(entry.target)
+            }
+        });
+    }
+    const observer = new IntersectionObserver(handleIntersect, options);
+    document.querySelectorAll('[class*="reveal-"]').forEach(function(r) {
+        observer.observe(r)
+    })
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+// Sélectionner les éléments des flèches
+const leftArrow = document.getElementById('leftArrow');
+const rightArrow = document.getElementById('rightArrow');
+
+// Sélectionner les images à afficher et masquer
+const leftImage = document.getElementById('leftArrow');
+const rightImage = document.getElementById('rightArrow');
+
+// Cacher l'image de droite au démarrage
+rightImage.style.display = 'none';
+
+// Ajouter des écouteurs d'événements pour les clics sur les flèches
+leftArrow.addEventListener('click', function() {
+    leftImage.style.display = 'none';
+    rightImage.style.display = 'block';
+});
+
+rightArrow.addEventListener('click', function() {
+    rightImage.style.display = 'none';
+    leftImage.style.display = 'block';
+});
+
+const cols = document.querySelectorAll('.col');
+cols.forEach(function(col) {
+    col.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const targetDiv = document.getElementById(targetId);
+        const allDivs = document.querySelectorAll('[id^="div"]');
+        allDivs.forEach(function(div) {
+            div.classList.add('hidden');
+        });
+        targetDiv.classList.remove('hidden');
+
+        // // Changer la visibilité des flèches en fonction de la div affichée
+        // if (targetId != 'div1') {
+        //     leftArrow.style.display = 'block';
+        //     rightArrow.style.display = 'none';
+        // } else {
+        //     leftArrow.style.display = 'none';
+        //     rightArrow.style.display = 'block';
+        // }
+    });
+});
+});
+
+
+</script>
+

@@ -2,7 +2,7 @@
 @section('title', 'équipe')
 
 @section('content')
-    <div class="container-fluid relative h-96 overflow-hidden">
+    <div class="container-fluid relative md:h-screen overflow-hidden">
         <div class="absolute inset-0"
             style="background-image: url('assets/img/ca11.png'); background-size: cover; background-position: center;"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black bg-opacity-50">
@@ -13,4 +13,5 @@
         </div>
     </div>
     <h1>coaching d'équipe</h1>
+    @include('home.temoignage')
 @endsection
