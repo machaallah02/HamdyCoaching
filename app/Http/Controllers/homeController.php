@@ -37,4 +37,9 @@ class homeController extends Controller
     {
         return view('home.blog');
     }
+
+    public function temoin()
+    {
+        return view('home.temoignage');
+    }
 }

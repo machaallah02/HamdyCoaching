@@ -21,6 +21,8 @@ Route::get('/blog',[homeController::class, 'blog'])
 ->name('app_blog');
 Route::get('/about',[homeController::class, 'about'])
 ->name('app_about');
+Route::get('/temoignages',[homeController::class, 'temoin'])
+->name('app_temoin');
 Route::match(['get', 'post'], '/dashboard', [homeController::class, 'dashboard'])
 ->name('app_dashboard');
 Route::get('/contact',[homeController::class, 'contact'])

@@ -175,53 +175,82 @@
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
 
-// Sélectionner les éléments des flèches
-const leftArrow = document.getElementById('leftArrow');
-const rightArrow = document.getElementById('rightArrow');
+        // Sélectionner les éléments des flèches
+        const leftArrow = document.getElementById('leftArrow');
+        const rightArrow = document.getElementById('rightArrow');
 
-// Sélectionner les images à afficher et masquer
-const leftImage = document.getElementById('leftArrow');
-const rightImage = document.getElementById('rightArrow');
+        // Sélectionner les images à afficher et masquer
+        const leftImage = document.getElementById('leftArrow');
+        const rightImage = document.getElementById('rightArrow');
 
-// Cacher l'image de droite au démarrage
-rightImage.style.display = 'none';
+        // Cacher l'image de droite au démarrage
+        rightImage.style.display = 'none';
 
-// Ajouter des écouteurs d'événements pour les clics sur les flèches
-leftArrow.addEventListener('click', function() {
-    leftImage.style.display = 'none';
-    rightImage.style.display = 'block';
-});
+        const cols = document.querySelectorAll('.col');
+        cols.forEach(function(col) {
+            col.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetDiv = document.getElementById(targetId);
+                const allDivs = document.querySelectorAll('[id^="div"]');
+                allDivs.forEach(function(div) {
+                    div.classList.add('hidden');
+                });
+                targetDiv.classList.remove('hidden');
 
-rightArrow.addEventListener('click', function() {
-    rightImage.style.display = 'none';
-    leftImage.style.display = 'block';
-});
+                // Changer la visibilité des flèches en fonction de la div affichée
+                switch (targetId) {
+                    case 'div1':
+                        leftArrow.style.display = 'block';
+                        rightArrow.style.display = 'none';
+                        break;
+                    case 'div2':
+                        leftArrow.style.display = 'none';
+                        rightArrow.style.display = 'block';
+                        break;
+                    case 'div3':
+                        leftArrow.style.display = 'none';
+                        rightArrow.style.display = 'block';
+                        break;
+                    case 'div4':
+                        leftArrow.style.display = 'none';
+                        rightArrow.style.display = 'block';
+                        break;
+                    case 'div5':
+                        leftArrow.style.display = 'none';
+                        rightArrow.style.display = 'block';
+                        break;
+                    case 'div6':
+                        leftArrow.style.display = 'none';
+                        rightArrow.style.display = 'block';
+                        break;
+                    default:
+                        leftArrow.style.display = 'none';
+                        rightArrow.style.display = 'block';
+                        break;
+                }
 
-const cols = document.querySelectorAll('.col');
-cols.forEach(function(col) {
-    col.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-target');
-        const targetDiv = document.getElementById(targetId);
-        const allDivs = document.querySelectorAll('[id^="div"]');
-        allDivs.forEach(function(div) {
-            div.classList.add('hidden');
+            });
         });
-        targetDiv.classList.remove('hidden');
-
-        // // Changer la visibilité des flèches en fonction de la div affichée
-        // if (targetId != 'div1') {
-        //     leftArrow.style.display = 'block';
-        //     rightArrow.style.display = 'none';
-        // } else {
-        //     leftArrow.style.display = 'none';
-        //     rightArrow.style.display = 'block';
-        // }
     });
-});
-});
 
 
 </script>
+
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentTestimonialIndex = 0;
+
+    function showNextTestimonial() {
+        testimonials[currentTestimonialIndex].classList.add('hidden');
+        currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+        testimonials[currentTestimonialIndex].classList.remove('hidden');
+    }
+
+    setInterval(showNextTestimonial, 4000); // Change de témoignage toutes les 4 secondes
+});
+</script>
+
+
 
