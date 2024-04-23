@@ -252,5 +252,25 @@
 });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        dropdownToggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
+                var dropdownId = toggle.getAttribute('href').substring(1);
+                var dropdownMenu = document.getElementById(dropdownId);
+
+                if (dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.remove('hidden');
+                } else {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        });
+    });
+</script>
+
+
 
 

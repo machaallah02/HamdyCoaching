@@ -29,6 +29,7 @@
             <div class="flex justify-center p-4 relative">
                 <div class="flex justify-center">
                     <div class="w-full ">
+                        <div class="flex justify-center text-center pt-2 text-white"><p>Inscrivez-vous ici</p></div>
                         <form action="#" method="post" class="bg-indigo-400 shadow-md rounded px-8 pt-6 pb-8 m-4">
                             <div class="flex items-center">
                                 <div class="w-1/4 mr-4">
@@ -56,7 +57,7 @@
                 </button>
             </div>
         </div>
-    <footer class="bg-indigo-900 text-center text-white relative">
+<footer class="bg-indigo-900 text-center text-white relative">
     <div class="container-fluid p-4">
     <section class="mb-4">
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-facebook"></i></a>

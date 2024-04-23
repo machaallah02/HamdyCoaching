@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -29,7 +31,15 @@ Route::get('/contact',[homeController::class, 'contact'])
 ->name('app_contact');
 Route::get('/coaching',[homeController::class, 'coaching'])
 ->name('app_coaching');
-Route::get('/coaching-equipe',[homeController::class, 'coaching1'])
-->name('coaching_equipe');
+Route::get('/coaching-business',[homeController::class, 'coaching1'])
+->name('coaching_business');
 Route::get('/coaching-pro',[homeController::class, 'coaching2'])
 ->name('coaching_professionnel');
+
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'doLogin']);
+Route::delete('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function(){
+    Route::resource('article',ArticleController::class)->except(['show']);
+});

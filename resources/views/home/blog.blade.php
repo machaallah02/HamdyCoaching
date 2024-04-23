@@ -13,13 +13,7 @@
             </a>
         </div>
     </div>
-    <div class="flex items-center justify-center">
-        <h1 class=" text-center font-bold bg-white rounded-full absolute p-2">b</h1>
-    </div>
-    <div class="container-fluid">
-        <div class="h-full w-full bg-blue-300 p-16 text-center mb-1 rounded-lg"> blog </div>
-        <div class="h-full w-full bg-blue-400 p-16 text-center mb-1 rounded-lg"> blog2 </div>
-    </div>
+
 
     <div class="w-full max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-2">
         <div class="md:flex">
@@ -41,7 +35,39 @@
             </div>
         </div>
     </div>
+    <div class="container justify-center items-center reveal-1 p-8 relative mb-4">
+        <p class="text-black font-bold text-4xl text-center p-4">Blog <strong class="text-indigo-600 text-4xl">.</strong></p>
+        <p class="text-sm text-center">Retrouvez ici tous nos articles sur les principaux enjeux des dirigeants d’entreprise.</p>
 
+        {{-- Supposons que vous ayez une route qui mène à cette vue et que vous avez passé les articles à cette vue --}}
+        <div class="container justify-center items-center flex flex-wrap p-4 reveal-1">
+            @foreach ($articles as $article)
+                <div class="max-w-sm rounded overflow-hidden shadow-lg m-2 p-1 w-1/3">
+                    <img class="w-full transform hover:scale-125" src="{{ Storage::url($article->image) }}" alt="Article Image">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">{{ $article->title }}</div>
+                        <p class="text-gray-700 text-base">{{ $article->description }}</p>
+                    </div>
+                    <div class="px-6 pt-4 pb-2 flex justify-center items-center">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{{ $article->created_at->format('d/m/Y H') }}H</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">{{ $article->auteur }}</span>
+                    </div>
+                    <div class="px-6 pt-4 pb-2 justify-center flex">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">En savoir plus</button>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+
+        <div class=" flex items-center justify-center">
+            <a href="{{ route('app_temoin') }}">
+                <button class="rounded bg-indigo-600 font-bold text-white m-2 p-3 text-xl reveal-3">Voire tous nos
+                    articles</button>
+            </a>
+        </div>
+    </div>
     <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-2">
         <div class="md:flex">
             <div class="md:flex-shrink-0 transition-transform duration-300 transform hover:scale-125">

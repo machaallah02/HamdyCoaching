@@ -87,7 +87,7 @@
 
     <div class="container px-4 py-8 bg-white mt-16 justify-center">
         <div class="flex justify-between mt-4">
-            <a href="{{ route('coaching_equipe') }}" class="no-underline reveal">
+            <a href="{{ route('coaching_business') }}" class="no-underline reveal">
                 <div class="flex flex-col items-center justify-center mx-8">
                     <img src="assets/img/pro.png" class="w-10 h-10 mb-2 bg-white rounded-lg p-2">
                     <p class="text-black">Coaching Professionnel</p>

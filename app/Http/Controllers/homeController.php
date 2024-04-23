@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+
 class homeController extends Controller
 {
     //
@@ -35,7 +37,8 @@ class homeController extends Controller
     }
     public function blog()
     {
-        return view('home.blog');
+        $articles= Article::orderBy('created_at', 'desc')->paginate(10);
+        return view('home.blog', compact('articles'));
     }
 
     public function temoin()

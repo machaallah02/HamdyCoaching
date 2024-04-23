@@ -15,7 +15,7 @@
                 <li class="nav-item dropdown" onmouseover="showDropdownMenu()" onmouseout="hideDropdownMenu()">
                     <a class="nav-link dropdown-toggle"> <b> Coaching</b></a>
                     <div class="dropdown-menu" id="coachingDropdown" aria-labelledby="coachingDropdown">
-                        <a class="dropdown-item @if (Request::route()->getName() == 'coaching_equipe') active @endif" aria-current="page" href="{{ route('coaching_equipe') }}">Business coaching</a>
+                        <a class="dropdown-item @if (Request::route()->getName() == 'coaching_business') active @endif" aria-current="page" href="{{ route('coaching_business') }}">Business coaching</a>
                         <a class="dropdown-item @if (Request::route()->getName() == 'coaching_professionnel') active @endif" aria-current="page" href="{{ route('coaching_professionnel') }}">Coaching Professionnel</a>
                     </div>
                 </li>
